@@ -1,13 +1,21 @@
+import clsx from "clsx";
+
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
     <nav>
-      <NavLink className="nav-link" to="/">
+      <NavLink
+        className={({ isActive }) => (isActive ? "active-link" : "")}
+        to="/"
+      >
         Home
       </NavLink>
-      <NavLink className="nav-link" to="/about">
+      <NavLink
+        className={({ isActive }) => (isActive ? "active-link" : "")}
+        to="/about"
+      >
         About
       </NavLink>
     </nav>

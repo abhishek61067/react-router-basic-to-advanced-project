@@ -19,11 +19,11 @@ nav {
   padding: 20px;
 }
 
-.nav-link {
+a {
   margin-right: 20px;
   color: #fffc;
 }
 
-.nav-link.active {
+a.active-link {
   color: green;
 }
