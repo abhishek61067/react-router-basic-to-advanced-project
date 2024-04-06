@@ -12,6 +12,8 @@ code {
     monospace;
 }
 
+/* custom css */
+
 nav {
   background-color: #000c;
   padding: 20px;
@@ -20,4 +22,8 @@ nav {
 .nav-link {
   margin-right: 20px;
   color: #fffc;
+}
+
+.nav-link.active {
+  color: green;
 }
