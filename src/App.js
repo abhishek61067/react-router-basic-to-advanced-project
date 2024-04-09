@@ -7,6 +7,7 @@ import NotFound from "./components/NotFound";
 import Products from "./components/Products";
 import Featured from "./components/Featured";
 import Brand from "./components/Brand";
+import ProductDetail from "./components/ProductDetail";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="products" element={<Products />}>
           <Route index element={<Featured />} />
           <Route path="brand" element={<Brand />} />
+          <Route path=":id" element={<ProductDetail />} />
         </Route>
         <Route path="*" element={<NotFound />} />
       </Routes>
