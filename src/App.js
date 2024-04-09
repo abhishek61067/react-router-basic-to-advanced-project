@@ -4,6 +4,9 @@ import About from "./components/About";
 import Navbar from "./components/Navbar";
 import OrderSummary from "./components/OrderSummary";
 import NotFound from "./components/NotFound";
+import Products from "./components/Products";
+import Featured from "./components/Featured";
+import Brand from "./components/Brand";
 
 function App() {
   return (
@@ -11,8 +14,12 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/order-summary" element={<OrderSummary />} />
+        <Route path="about" element={<About />} />
+        <Route path="order-summary" element={<OrderSummary />} />
+        <Route path="products" element={<Products />}>
+          <Route index element={<Featured />} />
+          <Route path="brand" element={<Brand />} />
+        </Route>
         <Route path="*" element={<NotFound />} />
       </Routes>
     </>
