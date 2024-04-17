@@ -8,6 +8,7 @@ import Products from "./components/Products";
 import Featured from "./components/Featured";
 import Brand from "./components/Brand";
 import ProductDetail from "./components/ProductDetail";
+import SearchParamsExample from "./components/SearchParamsExample";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="brand" element={<Brand />} />
           <Route path=":id" element={<ProductDetail />} />
         </Route>
+        <Route path="search-params-example" element={<SearchParamsExample />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </>
