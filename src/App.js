@@ -7,9 +7,11 @@ import NotFound from "./components/NotFound";
 import Products from "./components/Products";
 import Featured from "./components/Featured";
 import Brand from "./components/Brand";
-import About from "./components/About";
 import ProductDetail from "./components/ProductDetail";
 import SearchParamsExample from "./components/SearchParamsExample";
+import Login from "./utils/auth/Login";
+import Profile from "./components/Profile";
+import AuthProtectedWrapper from "./utils/auth/AuthProtectedWrapper";
 
 const LazyLoadedAboutPage = React.lazy(() => {
   return import("./components/About");
@@ -24,10 +26,9 @@ function App() {
         <Route
           path="about"
           element={
-            <About />
-            // <React.Suspense fallback="loading..">
-            // <LazyLoadedAboutPage />
-            // </React.Suspense>
+            <React.Suspense fallback="loading..">
+              <LazyLoadedAboutPage />
+            </React.Suspense>
           }
         />
         <Route path="order-summary" element={<OrderSummary />} />
@@ -38,6 +39,15 @@ function App() {
         </Route>
         <Route path="search-params-example" element={<SearchParamsExample />} />
         <Route path="*" element={<NotFound />} />
+        <Route path="/login" element={<Login />} />
+        <Route
+          path="/profile"
+          element={
+            <AuthProtectedWrapper>
+              <Profile />
+            </AuthProtectedWrapper>
+          }
+        />
       </Routes>
     </>
   );
