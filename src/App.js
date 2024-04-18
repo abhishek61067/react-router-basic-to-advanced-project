@@ -7,6 +7,7 @@ import NotFound from "./components/NotFound";
 import Products from "./components/Products";
 import Featured from "./components/Featured";
 import Brand from "./components/Brand";
+import About from "./components/About";
 import ProductDetail from "./components/ProductDetail";
 import SearchParamsExample from "./components/SearchParamsExample";
 
@@ -23,9 +24,10 @@ function App() {
         <Route
           path="about"
           element={
-            <React.Suspense fallback="loading..">
-              <LazyLoadedAboutPage />
-            </React.Suspense>
+            <About />
+            // <React.Suspense fallback="loading..">
+            // <LazyLoadedAboutPage />
+            // </React.Suspense>
           }
         />
         <Route path="order-summary" element={<OrderSummary />} />
