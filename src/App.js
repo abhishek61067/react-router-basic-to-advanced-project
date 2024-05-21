@@ -23,6 +23,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
+        {/* Suspense is used to show loader. i.e. showing fallback until the child component is loaded */}
         <Route
           path="about"
           element={
