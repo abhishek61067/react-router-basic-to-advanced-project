@@ -11,6 +11,7 @@ const AuthContextProvider = ({ children }) => {
     setUser(user);
     // navigating to where the user has come from(i.e.which protected route)  before getting redirected to the login page
     navigate(rediretPath, {
+      // always remove the history after login
       replace: true,
     });
   };
