@@ -9,7 +9,7 @@ const AuthContextProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const handleMainLogin = (user) => {
     setUser(user);
-    // navigating to where the user has come(i.e.which protected route) from before getting redirected to the login page
+    // navigating to where the user has come from(i.e.which protected route)  before getting redirected to the login page
     navigate(rediretPath, {
       replace: true,
     });
