@@ -38,7 +38,7 @@ function App() {
           <Route index element={<Featured />} />
           <Route path="brand" element={<Brand />} />
           {/* dynamic route and also the nested route so nested dynamic route */}
-          {/* dynamic route are those route whose path is not specified */}
+          {/* dynamic route are those route whose path is not specified and is using :slugname */}
           <Route path=":id" element={<ProductDetail />} />
         </Route>
         <Route path="search-params-example" element={<SearchParamsExample />} />
