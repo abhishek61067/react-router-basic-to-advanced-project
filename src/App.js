@@ -22,6 +22,8 @@ function App() {
     <>
       <Navbar />
       <Routes>
+        {/* relative path vs absolute path */}
+        {/* Absolute path contains protocol like https while relative path doesnot */}
         <Route path="/" element={<Home />} />
         {/* Suspense is used to show loader. i.e. showing fallback until the child component is loaded */}
         <Route
@@ -38,7 +40,7 @@ function App() {
           <Route index element={<Featured />} />
           <Route path="brand" element={<Brand />} />
           {/* dynamic route and also the nested route so nested dynamic route */}
-          {/* dynamic route are those route whose path is not specified or static and use :slugname or dynamic path*/}
+          {/* dynamic route are those route whose path is not specific or static and use :slugname or dynamic path*/}
           <Route path=":id" element={<ProductDetail />} />
         </Route>
         <Route path="search-params-example" element={<SearchParamsExample />} />
