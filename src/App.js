@@ -24,6 +24,7 @@ function App() {
       <Routes>
         {/* relative path vs absolute path */}
         {/* Absolute path contains protocol like https while relative path doesnot */}
+        {/* An absolute path replaces the existing path while a relative gets appended to it */}
         <Route path="/" element={<Home />} />
         {/* Suspense is used to show loader. i.e. showing fallback until the child component is loaded */}
         <Route
