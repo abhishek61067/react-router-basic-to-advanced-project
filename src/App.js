@@ -12,37 +12,31 @@ import SearchParamsExample from "./components/SearchParamsExample";
 import Login from "./utils/auth/Login";
 import Profile from "./components/Profile";
 import AuthProtectedWrapper from "./utils/auth/AuthProtectedWrapper";
+import { Suspense, lazy } from "react";
+import About from "./components/About";
 
-const LazyLoadedAboutPage = React.lazy(() => {
-  return import("./components/About");
-});
+// const About = lazy(() => {
+//   return import("./components/About");
+// });
 
 function App() {
   return (
     <>
       <Navbar />
       <Routes>
-        {/* relative path vs absolute path */}
-        {/* Absolute path contains protocol like https while relative path doesnot */}
-        {/* An absolute path replaces the existing path while a relative gets appended to it */}
         <Route path="/" element={<Home />} />
-        {/* 1. ./- denotes same directory, 2. ../- parent dir,  3. /- root directory */}
-        {/* Suspense is used to show loader. i.e. showing fallback until the child component is loaded */}
         <Route
           path="about"
           element={
-            <React.Suspense fallback="loading..">
-              <LazyLoadedAboutPage />
-            </React.Suspense>
+            <Suspense fallback="loading..">
+              <About />
+            </Suspense>
           }
         />
         <Route path="order-summary" element={<OrderSummary />} />
         <Route path="products" element={<Products />}>
-          {/* nested route */}
           <Route index element={<Featured />} />
           <Route path="brand" element={<Brand />} />
-          {/* dynamic route and also the nested route so nested dynamic route */}
-          {/* dynamic route are those route whose path is not specific or static and use :slugname or dynamic path*/}
           <Route path=":id" element={<ProductDetail />} />
         </Route>
         <Route path="search-params-example" element={<SearchParamsExample />} />

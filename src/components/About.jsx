@@ -26672,29 +26672,7 @@ const About = () => {
         metus nibh, hendrerit bibendum vehicula efficitur, imperdiet vel nisi.
         In scelerisque blandit molestie. Integer tempor nisl nec consequat
         egestas. Nulla volutpat porta maximus
-      </p>
-      <img src="/assets/image.jpg" width="1200px" height="auto" />
-      <img src="/assets/image.jpg" width="1200px" height="auto" />
-      <img src="/assets/image.jpg" width="1200px" height="auto" />
-      <img src="/assets/image.jpg" width="1200px" height="auto" />
-      <img src="/assets/image.jpg" width="1200px" height="auto" />
-      <img src="/assets/image.jpg" width="1200px" height="auto" />
-      <img src="/assets/image.jpg" width="1200px" height="auto" />
-      <img src="/assets/image.jpg" width="1200px" height="auto" />
-      <img src="/assets/image.jpg" width="1200px" height="auto" />
-      <img src="/assets/image.jpg" width="1200px" height="auto" />
-      <img src="/assets/image.jpg" width="1200px" height="auto" />
-      <img src="/assets/image.jpg" width="1200px" height="auto" />
-      <img src="/assets/image.jpg" width="1200px" height="auto" />
-      <img src="/assets/image.jpg" width="1200px" height="auto" />
-      <img src="/assets/image.jpg" width="1200px" height="auto" />
-      <img src="/assets/image.jpg" width="1200px" height="auto" />
-      <img src="/assets/image.jpg" width="1200px" height="auto" />
-      <img src="/assets/image.jpg" width="1200px" height="auto" />
-      <img src="/assets/image.jpg" width="1200px" height="auto" />
-      <img src="/assets/image.jpg" width="1200px" height="auto" />
-      <img src="/assets/image.jpg" width="1200px" height="auto" />
-      <img src="/assets/image.jpg" width="1200px" height="auto" />
+      </p>     
       <img src="/assets/image.jpg" width="1200px" height="auto" />
       <img src="/assets/image.jpg" width="1200px" height="auto" />
       <img src="/assets/image.jpg" width="1200px" height="auto" />
